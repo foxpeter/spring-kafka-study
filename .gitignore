@@ -1,0 +1,16 @@
+/target/
+.classpath
+.project
+/.settings/
+*.idea
+*.iml
+
+# Gradle files #
+################
+.gradle/
+/build/
+/out/
+out/
+/logs
+#*/src/test/
+/gradle
