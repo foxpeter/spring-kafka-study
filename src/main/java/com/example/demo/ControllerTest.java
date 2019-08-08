@@ -20,11 +20,19 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/test")
-public class cont {
+public class ControllerTest {
     private Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
+
+    @Autowired
+    private KafkaProducerConfig config;
+
+    @GetMapping(value = "/b")
+    public String importDialRecord() {
+        return config.kafkaTemplate().toString();
+    }
 
     @GetMapping(value = "/aa")
     public String importDialRecord(String req) {
